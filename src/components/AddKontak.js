@@ -7,7 +7,7 @@ const AddKontak = () => {
     const [nohp, setNohp] = useState("")
     const [id, setId] = useState(false)
 
-    const { addKontakResult, detailKontakResult  } = useSelector((state) => state.kontakReducer)
+    const { addKontakResult, detailKontakResult, updateKontakResult  } = useSelector((state) => state.kontakReducer)
     const dispatch = useDispatch()
 
     const handleSubmit = (event) => {
@@ -41,6 +41,15 @@ const AddKontak = () => {
         }
 
     }, [dispatch, detailKontakResult])
+
+    useEffect(() => {
+        if (updateKontakResult) {
+            dispatch(getListKontak())
+            setId(false)
+            setNama("")
+            setNohp("")
+        }
+    }, [updateKontakResult, dispatch])
 
     return (
         <div>

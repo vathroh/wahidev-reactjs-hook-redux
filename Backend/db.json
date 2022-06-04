@@ -1,0 +1,19 @@
+{
+  "kontak": [
+    {
+      "nama": "Budi Sulaiman",
+      "nohp": "0876776567567",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "nama": "Amin Hasyim Nasikhin",
+      "nohp": "08736473246"
+    },
+    {
+      "id": 3,
+      "nama": "Abang Bakso",
+      "nohp": "0987888888"
+    }
+  ]
+}
